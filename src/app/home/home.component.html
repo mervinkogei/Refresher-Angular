@@ -1,1 +1,31 @@
 <app-header></app-header>
+<div class="home-container">
+    <div class="all-movies">
+        <div class="trending-movies">
+            <div class="top">
+                <h4>Trending movies</h4>
+                <div class="view-all">View All</div>
+            </div>
+            <div class="movies-thumnail">
+                <div class="movie" *ngFor="let movie of trendingMovies">
+                  <div class="cover">
+                    <img [src] ="movie.cover" alt="">
+                </div>
+                <div class="detail">
+                    <div class="name">{{ movie.name }}</div>
+                    <div class="rating">
+                        <!-- {{ movie.rating }}  -->
+                        <ngb-rating [(rate)]="movie.rating">
+                            <ng-template let-fill="fill" let-index="index">
+                                <i class="bi-star{{fill === 100 ? '-fill' : ''}}" [class.filled]="fill === 100" [class.low]="index < 3"></i>
+                            </ng-template>
+                        </ngb-rating>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popular-movies"></div>
+</div>
