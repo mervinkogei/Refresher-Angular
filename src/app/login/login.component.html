@@ -1,0 +1,19 @@
+<div class="login-container">
+    <img  class="film" src="assets/film.png" alt="">
+    <div class="logo">Rotten Potatoes</div>
+    <div class="desc">University of Adelaide is a public university in Adelaide. It is the third oldest university in Australia. It is a part of one of the cheap universities in Australia comprises of five faculties. The university has had a considerable impact on the public life of South Australia, having educated many of the state’s leading businesspeople, lawyers, medical professionals, and politicians. </div>
+    <div class="login-form">
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" name="uname" class="form-control" [(ngModel)]="username" />
+        </div>
+        <div class="form-group">
+            <label for="pword">Password</label>
+            <input type="password" name="pword" class="form-control" [(ngModel)]="password"  />
+        </div>
+        <div class="btn-container">
+            <div class="error">{{errMsg}}</div>
+            <button class="btn btn-dark" (click)="login()">login</button>
+        </div>
+    </div>
+</div>
